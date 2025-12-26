@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tinycell</title>
+
+  <style>
+    :root{
+      --bg:#121829;
+      --card:#171f33;
+      --text:#e9eefc;
+      --muted:#b7c0de;
+      --line:rgba(255,255,255,.10);
+      --max:1040px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+        "Helvetica Neue", Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 60px;
+    }
+
+    header{
+      padding:10px 0 26px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:26px;
+    }
+
+    /* 🔹 로고를 게임 이미지처럼 가로 100% */
+    .logo{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:16px;
+    }
+
+    section{margin-top:26px;}
+
+    h2{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+
+    .about{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 16px;
+    }
+
+    .about ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .games{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      margin-top:14px;
+    }
+
+    .game{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .game .pad{
+      padding:16px 16px 12px;
+    }
+
+    .game h3{
+      margin:0 0 8px;
+      font-size:18px;
+    }
+
+    .game p{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    .game a.imageLink{
+      display:block;
+      width:100%;
+      border-top:1px solid var(--line);
+    }
+
+    .game img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .hint{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .contact{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 16px;
+    }
+
+    .contactRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:10px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.12);
+      font-size:14px;
+    }
+
+    .pill strong{font-weight:600}
+
+    .map{
+      margin-top:12px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--line);
+    }
+
+    iframe{
+      width:100%;
+      height:360px;
+      border:0;
+      display:block;
+    }
+
+    footer{
+      margin-top:26px;
+      color:var(--muted);
+      font-size:12.5px;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HEADER : 로고만 표시 -->
+    <header>
+      <img
+        class="logo"
+        src="./assets/tinycell.logo.png"
+        alt="Tinycell Logo"
+      />
+    </header>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About Tinycell</h2>
+      <div class="about">
+        <p>
+          Tinycell is a mobile game studio specializing in casual and puzzle titles.
+          We embrace AI tools across the team to work efficiently and deliver results faster.
+          Our focus is to provide accessible, high-quality gameplay for a broad audience.
+        </p>
+        <ul>
+          <li>Built with Unity &amp; Cocos</li>
+          <li>Casual &amp; puzzle genres</li>
+          <li>Global launch-ready pipeline</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GAMES -->
+    <section>
+      <h2>Games</h2>
+
+      <div class="games">
+
+        <!-- SLOT LIFE -->
+        <article class="game">
+          <div class="pad">
+            <h3>SLOT LIFE : Jackpot Journey</h3>
+            <p>
+              The world's first story-driven slot game!<br/>
+              Go from a broke to a legendary casino tycoon!
+              Travel through hotels and casinos, chase your dreams of hitting it big,
+              and grow your wealth and title through smart choices and strategy.
+            </p>
+          </div>
+          <a class="imageLink"
+             href="https://play.google.com/store/apps/details?id=com.tinycell.slotlifejackpot"
+             target="_blank" rel="noopener">
+            <img src="./assets/game.slotlife.png" alt="SLOT LIFE : Jackpot Journey" />
+          </a>
+        </article>
+
+        <!-- MATCH CAT -->
+        <article class="game">
+          <div class="pad">
+            <h3>Match Cat : Triple Matching</h3>
+            <p>
+              Relax and enjoy a cute matching puzzle game filled with adorable cat-themed items.
+              Match three of a kind, clear the board, and unlock new sets as you play!
+            </p>
+          </div>
+          <a class="imageLink"
+             href="https://play.google.com/store/apps/details?id=com.tinycell.matchcat"
+             target="_blank" rel="noopener">
+            <img src="./assets/game.matchcat.png" alt="Match Cat : Triple Matching" />
+          </a>
+        </article>
+
+        <!-- WATERMELON MAKER -->
+        <article class="game">
+          <div class="pad">
+            <h3>Watermelon Maker : Fruit Merge</h3>
+            <p>
+              Combine small fruits to grow bigger ones and ultimately create sweet,
+              juicy watermelons. Simple controls with satisfying merge gameplay.
+            </p>
+          </div>
+          <a class="imageLink"
+             href="https://play.google.com/store/apps/details?id=com.tinycell.watermelonmaker"
+             target="_blank" rel="noopener">
+            <img src="./assets/game.watermelonmaker.png" alt="Watermelon Maker : Fruit Merge" />
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Contact Us</h2>
+      <div class="contact">
+        <div class="contactRow">
+          <a class="pill" href="mailto:contact@tinycell.io">
+            <strong>Email</strong> contact@tinycell.io
+          </a>
+          <span class="pill">
+            <strong>Address</strong> 510 53 Digital-ro 31-gil, Guro-gu 08375 Seoul
+          </span>
+        </div>
+
+        <div class="map">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=510%2053%20Digital-ro%2031-gil,%20Guro-gu%2008375%20Seoul&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © Tinycell. All rights reserved.
+    </footer>
+
+  </div>
+</body>
+</html>
